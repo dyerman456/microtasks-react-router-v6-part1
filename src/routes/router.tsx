@@ -5,11 +5,13 @@ import {Adidas} from "../components/pages/Adidas.tsx";
 import {Puma} from "../components/pages/Puma.tsx";
 import {Abibas} from "../components/pages/Abibas.tsx";
 import {Prices} from "../components/pages/Prices.tsx";
+import {Model} from "../components/pages/Model.tsx";
 
 const PATH = {
   ADIDAS: '/adidas',
   PUMA: '/puma',
   ABIBAS: '/abibas',
+  MODEL: '/:model/:id',
   PRICES: '/prices',
   ERROR404: '/error404',
 } as const
@@ -31,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path: PATH.PUMA,
         element: <Puma/>
+      },
+      {
+        path: PATH.MODEL,
+        element: <Model/>
       },
       {
         path: PATH.ABIBAS,
